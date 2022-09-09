@@ -1,0 +1,23 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, color TEXT, price INTEGER, qunatity INTEGER, size INTEGER);
+
+INSERT INTO store VALUES (1, "Pants", "blue", 29, 30, "s,m,l");
+INSERT INTO store VALUES (2, "Shirts", "pink", 15, 37, "s,m,l");
+INSERT INTO store VALUES (3, "Shoes", "white", 50, 15, "8,9,10");
+INSERT INTO store VALUES (4, "Hats", "black", 20, 20, "s,m,l");
+INSERT INTO store VALUES (5, "Bras", "nude", 14, 25, "s,m,l");
+INSERT INTO store VALUES (6, "Blouse", "pink", 59, 15, "s,m,l");
+INSERT INTO store VALUES (7, "Sweaters", "purple", 29, 40, "s,m,l");
+INSERT INTO store VALUES (8, "Shorts", "Black", 15, 25, "s,m,l");
+INSERT INTO store VALUES (9, "leggings", "black", 21, 32, "s,m,l");
+INSERT INTO store VALUES (10, "Dress", "floral", 45, 10, "s,m,l");
+INSERT INTO store VALUES (11, "Socks", "white", 9, 20, "s,m,l");
+INSERT INTO store VALUES (12, "Necklaces", "gold plated", 80, 15, "m,l");
+INSERT INTO store VALUES (13, "Underware", "white", 12, 40, "s,m,l");
+INSERT INTO store VALUES (14, "Sunglasses", "black", 20, 13, "m");
+INSERT INTO store VALUES (15, "Spandex", "balck", 16, 20, "s,m");
+
+--display the database ordered by price with values greater than $25.
+SELECT * FROM store WHERE price > 25 ORDER BY price;
+
+--what is the 5 cheapest items?
+SELECT item, color, price FROM store order by price desc limit 5;
